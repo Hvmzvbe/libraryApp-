@@ -22,24 +22,5 @@ public class DbConnection {
     return conn;
    }
 
-
-
-//   public ResultSet CheckLogin( String a , String b){
-//        DbConnection connectNow = new DbConnection();
-//        Connection conn = connectNow.getConnexion();
-//        ResultSet res = null;
-//        String sqlVerified = "SELECT COUNT(1) FROM usersaccounts WHERE UserName = '" + a + "' AND Password = '" + b + "';";
-//
-//        try{
-//            Statement stmt=conn.createStatement();
-//           res = stmt.executeQuery(sqlVerified);
-//
-//
-//        } catch (SQLException e) {
-//            System.out.println(e.getMessage());
-//        }
-//       return res;
- // }
-
 }
 

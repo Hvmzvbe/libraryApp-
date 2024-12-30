@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
-import javafx.scene.LightBase;
+
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -27,14 +27,11 @@ public class Controller implements Initializable {
     @FXML
     private GridPane LivreGrid;
 
-    private List<Livre> r;
-    private List<Livre> rec;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        r = RecentlyAdded();
-        rec = recommende();
+        List<Livre> r = RecentlyAdded();
+        List<Livre> rec = recommende();
         int column=0;
         int row=1;
         try {
@@ -59,7 +56,7 @@ public class Controller implements Initializable {
                     ++row;
                 }
                 LivreGrid.add(A,column++,row);
-                LivreGrid.setMargin(A,new Insets(10));
+                GridPane.setMargin(A,new Insets(10));
 
             }
         } catch (IOException e) {
@@ -95,7 +92,7 @@ public class Controller implements Initializable {
         DbConnection conNow = new DbConnection();
         Connection con = conNow.getConnexion();
         String sql = "select * from livre;";
-        try (Statement stmt = con.createStatement(); ResultSet res = stmt.executeQuery(sql);) {
+        try (Statement stmt = con.createStatement(); ResultSet res = stmt.executeQuery(sql)) {
             while (res.next()) {
                 Livre l = new Livre();
                 l.setNom(res.getString(2));

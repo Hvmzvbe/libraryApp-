@@ -5,9 +5,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
 
 
+import java.util.Objects;
 
 
 public class CardController {
@@ -24,15 +24,15 @@ public class CardController {
     private HBox box;
 
 
-    private String[] colors = {"B9E5FF", "BDB2FE", "FB9AA8", "418FDE","00A3E0","008675"};
+    private final String[] colors = {"B9E5FF", "BDB2FE", "FB9AA8", "418FDE","00A3E0","008675"};
 
 
 
     public void setcard(Livre l) {
 
-            Image imageL = new Image(getClass().getResourceAsStream(l.getImgSrc()));
+            Image imageL = new Image(Objects.requireNonNull(getClass().getResourceAsStream(l.getImgSrc())));
             LivreImg.setImage(imageL);
-         Image imageR = new Image(getClass().getResourceAsStream(l.getRateSrc()));
+         Image imageR = new Image(Objects.requireNonNull(getClass().getResourceAsStream(l.getRateSrc())));
         LivreRate.setImage(imageR);
 
             LivreTitre.setText(l.getNom());
