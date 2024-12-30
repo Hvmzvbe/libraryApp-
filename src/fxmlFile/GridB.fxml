@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GridBController">
+   <children>
+      <ImageView fx:id="Gimg" fitHeight="224.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/813_la_double_vie_d_arsene_lupin.jpg" />
+         </image>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </ImageView>
+      <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="186.0" prefWidth="50.0" spacing="5.0">
+         <children>
+            <Label fx:id="GTitre" prefHeight="66.0" prefWidth="159.0" text="B13 / La double vie  d Arsen Lupin">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="GAuthor" prefHeight="24.0" prefWidth="166.0" text="Maurice Leblanc">
+               <font>
+                  <Font name="Berlin Sans FB" size="10.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="GRate" fitHeight="30.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/5star.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+</VBox>
