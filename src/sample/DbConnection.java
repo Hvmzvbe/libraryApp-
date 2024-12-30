@@ -11,7 +11,7 @@ public class DbConnection {
    public Connection getConnexion(){
        String url = "jdbc:mysql://127.0.0.1:3306/signup";
        String user = "root";
-       String password = "";
+       String password = "AhmadAhmad1";
     try{
 
         conn = DriverManager.getConnection(url,user,password);

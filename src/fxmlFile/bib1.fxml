@@ -21,9 +21,9 @@
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="60.0" prefWidth="212.0" text="My library" textFill="#ff5056">
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="212.0" text="My library" textFill="#00ab84">
                <font>
-                  <Font name="Edwardian Script ITC" size="36.0" />
+                  <Font name="Brush Script MT Italic" size="48.0" />
                </font>
             </Label>
             <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="36.0" prefWidth="6.0" />
