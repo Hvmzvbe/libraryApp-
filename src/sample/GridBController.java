@@ -30,5 +30,6 @@ public class GridBController {
         GRate.setImage(imageR);
         GAuthor.setText(l.getAuthor());
         GTitre.setText(l.getNom());
+
     }
 }
