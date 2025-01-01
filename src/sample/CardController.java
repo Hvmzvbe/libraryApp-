@@ -1,6 +1,7 @@
 package sample;
 import Model.Livre;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
@@ -10,7 +11,7 @@ import javafx.scene.layout.HBox;
 import java.util.Objects;
 
 
-public class CardController {
+public class CardController  {
 
     @FXML
     private Label LivreAuthor;
@@ -24,7 +25,8 @@ public class CardController {
     private HBox box;
 
 
-    private final String[] colors = {"B9E5FF", "BDB2FE", "FB9AA8", "418FDE","00A3E0","008675"};
+    private final String[] colors = { "B9E5FF", "BDB2FE", "FB9AA8", "418FDE", "00A3E0", "008675", "FFD700", "FFB6C1", "98FB98", "87CEFA", "FFA07A", "E6E6FA", "FFDEAD", "ADD8E6", "FFC0CB", "F0E68C", "AFEEEE", "D8BFD8", "FFFACD", "E0FFFF"};
+
 
 
 
