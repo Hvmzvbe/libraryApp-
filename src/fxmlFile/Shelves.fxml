@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" prefHeight="60.0" prefWidth="212.0" text="My library" textFill="#00ab84">
+                    <font>
+                        <Font name="Brush Script MT Italic" size="48.0" />
+                    </font>
+                </Label>
+                <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="36.0" prefWidth="6.0" />
+                <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="290.0" styleClass="round-layout" stylesheets="@../css/styles.css">
+                    <children>
+                        <TextField prefHeight="26.0" prefWidth="247.0" promptText="Search" styleClass="transparent" stylesheets="@../css/styles.css" />
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/Search.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="139.0">
+                    <children>
+                        <Label fx:id="UserNameAccounts" prefHeight="63.0" prefWidth="178.0" text="nom user">
+                            <font>
+                                <Font name="Berlin Sans FB" size="18.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/user.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="740.0" prefWidth="242.0" spacing="10.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="176.0" prefWidth="251.0" spacing="5.0">
+                    <children>
+                        <Label prefHeight="42.0" prefWidth="178.0" text="Brows">
+                            <font>
+                                <Font name="Berlin Sans FB" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/ranking.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnTopBooks" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Top Books">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="57.0" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/browser.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnBrows" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Browse">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/categorie.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnCtegori" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Categorie">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Separator prefWidth="200.0" />
+                <VBox layoutX="10.0" layoutY="30.0" prefHeight="176.0" prefWidth="251.0" spacing="5.0">
+                    <children>
+                        <Label prefHeight="42.0" prefWidth="178.0" text="Your Book">
+                            <font>
+                                <Font name="Berlin Sans FB" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/reading.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnReading" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Reading">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="57.0" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/favorie.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnFavorites" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Favorites">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/history.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnHistory" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="History">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Separator prefWidth="200.0" />
+                <VBox layoutX="10.0" layoutY="257.0" prefHeight="176.0" prefWidth="251.0" spacing="5.0">
+                    <children>
+                        <Label prefHeight="42.0" prefWidth="178.0" text="Shelves">
+                            <font>
+                                <Font name="Berlin Sans FB" size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="240.0" spacing="15.0" stylesheets="@../css/styles.css">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/shelves.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="btnShelves" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Your Shelves">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                     <styleClass>
+                        <String fx:value="mouse-moved" />
+                        <String fx:value="selected" />
+                     </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="115.0" prefWidth="242.0">
+                            <children>
+                                <Button fx:id="btnShelvesAdd" mnemonicParsing="false" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #00ab84;" text="Create a Shelve">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets top="20.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </VBox>
+    </left>
+</BorderPane>

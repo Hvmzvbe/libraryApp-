@@ -40,7 +40,7 @@
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
             <HBox alignment="CENTER" prefHeight="60.0" prefWidth="139.0">
                <children>
-                  <Label prefHeight="63.0" prefWidth="178.0" text="nom user">
+                  <Label fx:id="UserNameAccounts" prefHeight="63.0" prefWidth="178.0" text="nom user">
                      <font>
                         <Font name="Berlin Sans FB" size="18.0" />
                      </font>
@@ -81,11 +81,11 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="Top Books">
+                        <Button fx:id="btnTopBooks" mnemonicParsing="false" onAction="#btntopbooks" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Top books">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="40.0" prefWidth="240.0" spacing="15.0" stylesheets="@../css/styles.css">
@@ -98,11 +98,11 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="Browse">
+                        <Button fx:id="btnBrows" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" text="Brows">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                      <styleClass>
                         <String fx:value="mouse-moved" />
@@ -119,11 +119,11 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="Categorie">
+                        <Button fx:id="btnCategorie" mnemonicParsing="false" onAction="#btncategories" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" text="Categori">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                   </HBox>
                </children>
@@ -149,11 +149,11 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="Reading">
+                        <Button fx:id="btnReading" mnemonicParsing="false" onAction="#btnReading" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" text="reading">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="40.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
@@ -166,11 +166,11 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="Favorites">
+                        <Button fx:id="btnFavorites" mnemonicParsing="false" onAction="#btnfavorites" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" text="Favorites">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="58.0" prefWidth="240.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@../css/styles.css">
@@ -183,11 +183,11 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="History">
+                        <Button fx:id="btnHistory" mnemonicParsing="false" onAction="#btnHistory" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" text="History">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                   </HBox>
                </children>
@@ -213,16 +213,16 @@
                               <Insets />
                            </HBox.margin>
                         </ImageView>
-                        <Label prefHeight="32.0" prefWidth="140.0" text="Your Shelves">
+                        <Button fx:id="btnShelves" mnemonicParsing="false" onAction="#btnShelves" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" text="Your Shelves">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>
-                        </Label>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="115.0" prefWidth="242.0">
                      <children>
-                        <Button mnemonicParsing="false" style="-fx-background-color: FF5056;" text="Create a Shelve">
+                        <Button fx:id="btnShelvesAdd" mnemonicParsing="false" style="-fx-background-color: #00ab84;" text="Create a Shelve">
                            <font>
                               <Font name="Berlin Sans FB" size="16.0" />
                            </font>

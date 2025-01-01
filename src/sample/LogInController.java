@@ -27,6 +27,8 @@ public class LogInController {
     private PasswordField txtPasswordLogin;
     @FXML
     private Label lblLoginMessage;
+    @FXML
+    private Label UserNameAccounts;
 
 
 
@@ -49,6 +51,8 @@ public class LogInController {
             while(res.next()){
                 if(res.getInt(1)==1){
                     openLibrary();
+//                    UserNameAccounts.setText(txtUsernameLogin.getText());
+//                    System.out.println(UserNameAccounts.getText());
 
                       }else {lblLoginMessage.setText("Login or password is incorrect. Please try again.");}
 
