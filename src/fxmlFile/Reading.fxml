@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ReadingController">
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
             <children>
@@ -75,7 +75,7 @@
                                         <Image url="@../img/ranking.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnTopBooks" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Top Books">
+                                <Button fx:id="btnTopBooks" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnTopBooks" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Top Books">
                                     <font>
                                         <Font name="Berlin Sans FB" size="16.0" />
                                     </font>
@@ -89,7 +89,7 @@
                                         <Image url="@../img/browser.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnBrows" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Browse">
+                                <Button fx:id="btnBrows" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnBrows" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Browse">
                                     <font>
                                         <Font name="Berlin Sans FB" size="16.0" />
                                     </font>
@@ -103,7 +103,7 @@
                                         <Image url="@../img/categorie.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnCtegori" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Categorie">
+                                <Button fx:id="btnCtegori" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnCtegori" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Categorie">
                                     <font>
                                         <Font name="Berlin Sans FB" size="16.0" />
                                     </font>
@@ -148,7 +148,7 @@
                                         <Image url="@../img/favorie.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnFavorites" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Favorites">
+                                <Button fx:id="btnFavorites" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnFavorites" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Favorites">
                                     <font>
                                         <Font name="Berlin Sans FB" size="16.0" />
                                     </font>
@@ -162,7 +162,7 @@
                                         <Image url="@../img/history.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnHistory" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="History">
+                                <Button fx:id="btnHistory" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnHistory" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="History">
                                     <font>
                                         <Font name="Berlin Sans FB" size="16.0" />
                                     </font>
@@ -189,7 +189,7 @@
                                         <Image url="@../img/shelves.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="btnShelves" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Your Shelves">
+                                <Button fx:id="btnShelves" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnShelves" prefHeight="35.0" prefWidth="136.0" styleClass="transparent" stylesheets="@../css/styles.css" text="Your Shelves">
                                     <font>
                                         <Font name="Berlin Sans FB" size="16.0" />
                                     </font>

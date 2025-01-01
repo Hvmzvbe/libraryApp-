@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class BrowseController implements Initializable {
 
     @FXML
     private GridPane LivreGrid;
@@ -152,7 +152,7 @@ public class Controller implements Initializable {
 
 
 
-    private void openFXML(String file ,Button b){
+    public void openFXML(String file ,Button b){
         try{
             Parent root =FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxmlFile/"+file+".fxml")));
             Stage p = new Stage();
