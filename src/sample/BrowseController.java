@@ -99,11 +99,21 @@ public class BrowseController implements Initializable {
             System.out.println( e.getMessage());
         }
     }
+
+
+
+
+
+
+
+
+
+
+    //boutons
     public void btncategories(ActionEvent a){
 
         openFXML("categorie",btnCategorie);
     }
-
     public void btntopbooks(ActionEvent a){
 
         openFXML("TopBooks",btnTopBooks);
@@ -166,6 +176,10 @@ public class BrowseController implements Initializable {
         }
 
     }
+
+
+
+
     private List<Livre> RecentlyAdded() {
         List<Livre> ls = new ArrayList<>();
         DbConnection connectNow = new DbConnection();
@@ -210,4 +224,6 @@ public class BrowseController implements Initializable {
         }
         return ls;
     }
+
+
 }

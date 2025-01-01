@@ -1,18 +1,34 @@
 package sample;
 
+import Model.Livre;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class TopBooksController {
+public class TopBooksController implements Initializable {
+
+    @FXML
+    private GridPane GrideTopBooks;
     @FXML
     private Label UserNameAccounts;
 
@@ -42,6 +58,38 @@ public class TopBooksController {
 
     @FXML
     private HBox cardLayout;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        List<Livre> r = TopBooks();
+        int column=0;
+        int row=1;
+        try {
+
+            for(Livre livre : r){
+                FXMLLoader fx =new FXMLLoader();
+                fx.setLocation(getClass().getResource("/fxmlFile/GridB.fxml"));
+                VBox A = fx.load();
+                GridBController Grid = fx.getController();
+                Grid.setData(livre);
+                if(column==6){
+                    column=0;
+                    ++row;
+                }
+                GrideTopBooks.add(A,column++,row);
+                GridPane.setMargin(A,new Insets(10));
+
+            }
+        } catch (IOException e) {
+            System.out.println( e.getMessage());
+        }
+
+    }
+
+
+
+    //boutons
+
     public void btnCtegori(ActionEvent a){
 
         openFXML("categorie",btnCtegori);
@@ -98,6 +146,28 @@ public class TopBooksController {
             System.out.println(e.getMessage());
         }
 
+    }
+    private List<Livre> TopBooks(){
+        List<Livre> ls = new ArrayList<>();
+        DbConnection connow = new DbConnection();
+        Connection conn= connow.getConnexion();
+        String sql="SELECT * FROM livre ORDER BY LivreRate DESC;";
+        try(Statement stmt= conn.createStatement(); ResultSet res =stmt.executeQuery(sql)){
+
+            while (res.next()){
+                Livre l = new Livre();
+                l.setNom(res.getString(2));
+                l.setAuthor(res.getString(3));
+                l.setImgSrc(res.getString(4));
+                l.setRateSrc(res.getString(5));
+                ls.add(l);
+
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return ls;
     }
 
 }
