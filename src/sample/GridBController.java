@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.VBox;
 
 
 import java.util.Objects;
@@ -32,4 +33,6 @@ public class GridBController {
         GTitre.setText(l.getNom());
 
     }
+
+
 }
